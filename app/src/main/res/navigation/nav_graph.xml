@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/main">
+    <fragment
+        android:id="@+id/main"
+        android:name="com.example.root.ui.MainFragment" >
+        <action
+            android:id="@+id/action_main_fragment_to_details_fragment"
+            app:destination="@id/details_fragment"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/details_fragment"
+        android:name="com.example.root.ui.DetailsFragment">
+        <argument
+            android:name="search_item"
+            app:argType="com.example.root.domain.SearchItem"/>
+    </fragment>
+
+</navigation>

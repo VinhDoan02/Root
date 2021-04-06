@@ -6,6 +6,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
+import com.example.root.BR
 import com.example.root.databinding.SearchItemBinding
 import com.example.root.ui.viewmodel.SearchItemViewModel
 
@@ -39,9 +40,7 @@ class RecyclerViewAdapter(
 
 class ItemViewHolder(val binding : ViewDataBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(itemViewModel: ItemViewModel) {
-        if(binding is SearchItemBinding) {
-            binding.viewModel = (itemViewModel as SearchItemViewModel)
-        }
+        binding.setVariable(BR.viewModel,itemViewModel)
     }
 }
 

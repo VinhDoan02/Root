@@ -25,7 +25,7 @@ class MainViewModel(val repo : SearchRepository) : ViewModel() {
 
     init{
         Log.d("testroot" , "querying")
-        querySearch("Tesla")
+        querySearch("Apple")
     }
 
     fun querySearch(wordQuery: String) {
